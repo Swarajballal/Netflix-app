@@ -4,7 +4,6 @@ import prismadb from '@/lib/prismadb'
 import { compare } from 'bcrypt';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
-import FacebookProvider from 'next-auth/providers/facebook';
 import TwitterProvider from 'next-auth/providers/twitter';
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
 
@@ -17,10 +16,6 @@ export default NextAuth({
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID ?? '',
             clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? '',
-        }),
-        FacebookProvider({
-            clientId: process.env.FACEBOOK_ID ?? '',
-            clientSecret: process.env.FACEBOOK_SECRET ?? '',
         }),
         TwitterProvider({
             clientId: process.env.TWITTER_ID ?? '',
