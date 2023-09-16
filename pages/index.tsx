@@ -1,6 +1,7 @@
 import { NextPageContext } from 'next';
 import Navbar from '@/components/Navbar';
 import { getSession } from 'next-auth/react';
+import Billboard from '@/components/Billboard';
 
 
 export async function getServerSideProps(context: NextPageContext) {
@@ -24,6 +25,7 @@ const Profiles = () => {
   return (
    <>
     <Navbar />
+    <Billboard />
    </>
   )
 }
