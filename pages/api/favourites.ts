@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import prismadb from '@/lib/prismadb';
 import serverAuth from '@/lib/serverAuth';
-import { data } from 'autoprefixer';
+
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'GET') {
@@ -11,7 +11,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
         const { currentUser } = await serverAuth(req);
 
-        const favouriteMovies = await prismadb.movie.findUnique({
+        const favouriteMovies = await prismadb.movie.findMany({
             where: {
                 id: {
                     in: currentUser?.favouriteIds,
