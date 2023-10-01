@@ -1,5 +1,5 @@
 
-website: [Netflix-app-link](https://netflix-app-iota.vercel.app/)
+website: [Netflix-app-link](https://netflix-438bpq9dc-swarajballal.vercel.app)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
